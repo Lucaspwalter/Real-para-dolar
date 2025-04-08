@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.gif" alt="Logo do Site">
+    <div>
+        <h1>Curso de CSS - Converter dimeiro</h1>
+        <input type="number" id="valorReal" placeholder="Valor em Real">
+        <input id="valorDolar" placeholder="Valor em Dólar">
+        <button onclick="realParaDolar()">Converter</button>
+    </div>
+
+    <script>
+        function realParaDolar() {
+            const input = document.getElementById('valorReal')
+            const valorEmReal = parseFloat(input.value.replace(',', '.'))
+            const valorEmDolar = valorEmReal / 5.98
+            document.getElementById('valorDolar').value = valorEmDolar.toFixed(2)
+        }
+    </script>
+</body>
+</html>
